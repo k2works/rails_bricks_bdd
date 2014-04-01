@@ -58,6 +58,12 @@ group :test do
   gem "capybara", '~> 2.2.1'
 end
 
+# Cucumber
+group :test do
+  gem "cucumber-rails", require: false
+  gem "database_cleaner"
+end
+
 # Unicoron
 gem "unicorn"
 

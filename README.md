@@ -1,4 +1,4 @@
-RailsBricks入門
+RailsBricks入門(BDD適用編)
 ===================
 
 # 目的 #
@@ -23,6 +23,7 @@ RailsBrickを使ってBDD環境を構築する
 + [アプリケーションのデプロイ](#3)
 + [日本語対応](#4)
 + [Rspecテスト環境構築](#5)
++ [Cucumberテスト環境構築](#6)
 
 # 詳細 #
 
@@ -83,6 +84,46 @@ RailsBrickを使ってBDD環境を構築する
 
     $ guard
 
+### Procfileの編集 ###
+
+Procfileに以下の内容を追加する
+
+    guard: bundle exec guard
+
+
+## <a name="6">Cucumberテスト環境構築</a> ##
+
+### Gemfileの編集 ###
+
+以下のgemを追加してbundle実行
+
+    gem "cucumber-rails", require: false
+    gem "database_cleaner"
+
+### Cucumberセットアップ ###
+
+    $ rails g cucumber:install
+      create  config/cucumber.yml
+      create  script/cucumber
+       chmod  script/cucumber
+      create  features/step_definitions
+      create  features/support
+      create  features/support/env.rb
+       exist  lib/tasks
+      create  lib/tasks/cucumber.rake
+        gsub  config/database.yml
+        gsub  config/database.yml
+       force  config/database.yml
+
+### Cucumberの実行 ###
+
+    $ rake cucumber
+    /Users/k2works/.rvm/rubies/ruby-2.0.0-p247/bin/ruby -S bundle exec cucumber  --profile default
+    Using the default profile...
+    0 scenarios
+    0 steps
+    0m0.000s
+
 # 参照 #
 
 [RailsBricks](http://www.railsbricks.net/)
@@ -101,4 +142,4 @@ RailsBrickを使ってBDD環境を構築する
 
 [guard / guard-livereload](https://github.com/guard/guard-livereload)
 
-
+[cucumber / cucumber-rails](https://github.com/cucumber/cucumber-rails)
