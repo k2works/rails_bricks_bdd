@@ -52,3 +52,9 @@ end
 group :test do
   gem "capybara", '~> 2.2.1'
 end
+
+# Unicoron
+gem 'unicorn'
+
+# i18n
+gem 'i18n_generators'

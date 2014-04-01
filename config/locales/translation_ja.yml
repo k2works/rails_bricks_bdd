@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      user: user  #g
+
+    attributes:
+      user:
+        admin: admin  #g
+        email: email  #g
+        password_digest: password_digest  #g
+        slug: slug  #g
+        username: username  #g
