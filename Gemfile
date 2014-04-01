@@ -46,6 +46,11 @@ gem 'bootstrap-sass', '~> 3.0.3.0'
 # RSpec
 group :test, :development do
   gem "rspec-rails", '~> 2.14.1'
+  gem "guard-rspec"
+  gem "factory_girl_rails"
+  gem "spring"
+  gem "guard-livereload", require: false
+  gem "spring-commands-rspec"  
 end
 
 # Capybara
@@ -54,7 +59,7 @@ group :test do
 end
 
 # Unicoron
-gem 'unicorn'
+gem "unicorn"
 
 # i18n
-gem 'i18n_generators'
+gem "i18n_generators"

@@ -15,12 +15,14 @@ RailsBrickを使ってBDD環境を構築する
 
 + [Herokuにサインアップしている](https://id.heroku.com/signup/devcenter)
 + [Heroku Toolbeltをインストールしている](https://toolbelt.heroku.com/)
++ [LiveReloadをChromeにインストールしている](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
 
 # 構成 #
 + [環境セットアップ](#1)
 + [アプリケーションのセットアップ](#2)
 + [アプリケーションのデプロイ](#3)
 + [日本語対応](#4)
++ [Rspecテスト環境構築](#5)
 
 # 詳細 #
 
@@ -45,6 +47,41 @@ RailsBrickを使ってBDD環境を構築する
 
 [RailsBricks入門参照](https://github.com/k2works/rails_bricks_introduction)
 
+## <a name="5">Rspecテスト環境構築</a> ##
+
+### Gemfileの編集 ###
+
+以下のgemを追加してbundle実行
+
+    gem "guard-rspec",
+    gem "factory_girl_rails",
+    gem "spring"
+    gem "guard-livereload", require: false
+    gem "spring-commands-rspec"
+
+### spec_helperの設定 ###
+
+以下を追加
+
+    config.before(:all) do
+      FactoryGirl.reload
+    end
+
+### Guardの設定 ###
+
+以下のコマンドを実行してGuardflileを生成する
+
+    $ guard init rspec livereload
+
+生成されたGuardfileの以下の行を変更する
+
+    guard :rspec do
+
+    guard :rspec, cmd: 'spring rspec -f doc' do
+
+実行して確認する
+
+    $ guard
 
 # 参照 #
 
@@ -57,3 +94,11 @@ RailsBrickを使ってBDD環境を構築する
 [Railsの多言語化対応 I18nのやり方を整理してみた！【国際化/英語化】](http://morizyun.github.io/blog/i18n-english-rails-ruby-many-languages/)
 
 [amatsuda / i18n_generators](https://github.com/amatsuda/i18n_generators)
+
+[Rails4時代の高速テスト環境 Rspec+Guard+FactoryGirl+Spring[NEW!]](http://qiita.com/unosk/items/c2e2bbc31d97e92803dc)
+
+[guard / guard-rspec](https://github.com/guard/guard-rspec)
+
+[guard / guard-livereload](https://github.com/guard/guard-livereload)
+
+
