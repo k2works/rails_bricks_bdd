@@ -99,6 +99,7 @@ Procfileに以下の内容を追加する
 
     gem "cucumber-rails", require: false
     gem "database_cleaner"
+    gem "guard-cucumber"
 
 ### Cucumberセットアップ ###
 
