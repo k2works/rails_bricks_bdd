@@ -72,7 +72,7 @@ RailsBrickを使ってBDD環境を構築する
 
 以下のコマンドを実行してGuardflileを生成する
 
-    $ guard init rspec cucumber livereload
+    $ guard init rspec livereload
 
 生成されたGuardfileの以下の行を変更する
 
@@ -125,7 +125,8 @@ Procfileに以下の内容を追加する
     0 steps
     0m0.000s
 
-### Guardファイル追加
+### Guardファイル追加 ###
+
     $guard init cucumber
 
 # 参照 #
