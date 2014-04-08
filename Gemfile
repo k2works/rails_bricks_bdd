@@ -8,6 +8,8 @@ gem 'jquery-rails', '~> 3.0.4'
 gem 'turbolinks', '~> 2.1.0'
 gem 'jbuilder', '~> 1.5.3'
 gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'therubyracer'
+gem 'debugger'
 
 group :doc do
   gem 'sdoc', require: false
@@ -50,12 +52,14 @@ group :test, :development do
   gem "factory_girl_rails"
   gem "spring"
   gem "guard-livereload", require: false
-  gem "spring-commands-rspec"  
+  gem "spring-commands-rspec"
 end
 
 # Capybara
 group :test do
   gem "capybara", '~> 2.2.1'
+  gem "launchy"
+  gem 'guard-cucumber'  
 end
 
 # Cucumber
