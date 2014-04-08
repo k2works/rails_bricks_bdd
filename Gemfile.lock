@@ -132,8 +132,11 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.2)
+<<<<<<< HEAD
     launchy (2.4.2)
       addressable (~> 2.3)
+=======
+>>>>>>> 2669b9753bd9b29537b0a5ea65fdbec2ed1e94bc
     libv8 (3.16.14.3)
     listen (2.7.1)
       celluloid (>= 0.15.2)

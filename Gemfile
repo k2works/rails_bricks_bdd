@@ -59,7 +59,7 @@ end
 group :test do
   gem "capybara", '~> 2.2.1'
   gem "launchy"
-  gem 'guard-cucumber'  
+  gem 'guard-cucumber'
 end
 
 # Cucumber
