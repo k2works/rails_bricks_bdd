@@ -24,6 +24,7 @@ RailsBrickを使ってBDD環境を構築する
 + [日本語対応](#4)
 + [Rspecテスト環境構築](#5)
 + [Cucumberテスト環境構築](#6)
++ [ドキュメント環境構築](#7)
 
 # 詳細 #
 
@@ -129,6 +130,55 @@ Procfileに以下の内容を追加する
 
     $guard init cucumber
 
+## <a name="7">ドキュメント環境構築</a> ##
+
+以下のGemを追加してbundle実行
+
+```Ruby
+gem 'yard', :require => false
+gem 'yard-cucumber', :require => false
+gem 'redcarpet'
+gem 'guard-yard'
+```
+
+### Yardの実行 ###
+```
+$ yard
+$ yard server
+$ open http://localhost:8808
+```
+
+### Guardファイル追加 ###
+```
+$ guard init yard
+```
+
+### Guard実行
+```
+$guard
+12:23:38 - INFO - Guard is using TerminalTitle to send notifications.
+12:23:38 - INFO - [Guard::Yard] Stopping YARD Documentation Server.
+12:23:38 - INFO - [Guard::Yard] Starting YARD Documentation Server.
+>> YARD 0.8.7.4 documentation server at http://0.0.0.0:8808
+[2014-04-21 12:23:39] INFO  WEBrick 1.3.1
+[2014-04-21 12:23:39] INFO  ruby 2.0.0 (2013-06-27) [x86_64-darwin12.5.0]
+[2014-04-21 12:23:39] WARN  TCPServer Error: Address already in use - bind(2)
+[2014-04-21 12:23:39] INFO  WEBrick::HTTPServer#start: pid=88760 port=8808
+12:23:40 - INFO - [Guard::Yard] Server successfully started.
+12:23:40 - INFO - Guard::RSpec is running
+12:23:40 - INFO - Running all features
+Disabling profiles...
+
+
+0 scenarios
+0 steps
+0m0.000s
+
+12:23:45 - INFO - Guard is now watching at '/Users/k2works/projects/github/rails_bricks_bdd'
+[1] guard(main)>
+```
+guard実行時にYardサーバーが実行されるので_http://localhost:8808_にアクスすればドキュメントを閲覧できる。画面が文字化けしてる場合はエンコードをUnicode(UTF-8)に変更する。
+
 # 参照 #
 
 [RailsBricks](http://www.railsbricks.net/)
@@ -148,3 +198,5 @@ Procfileに以下の内容を追加する
 [guard / guard-livereload](https://github.com/guard/guard-livereload)
 
 [cucumber / cucumber-rails](https://github.com/cucumber/cucumber-rails)
+
+[panthomakos/guard-yard](https://github.com/panthomakos/guard-yard)

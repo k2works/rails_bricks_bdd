@@ -68,6 +68,14 @@ group :test do
   gem "guard-cucumber"
 end
 
+# Yard
+group :test, :development do
+  gem 'yard', :require => false
+  gem 'yard-cucumber', :require => false
+  gem 'redcarpet'
+  gem 'guard-yard'
+end
+
 # Unicoron
 gem "unicorn"
 
