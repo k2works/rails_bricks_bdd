@@ -1,4 +1,5 @@
 app/models/user.rb 37df33e0106718710420ac93196c4b725ac86d2c
+features/support/env.rb 4718261c48ad9d79fadae68a056a265356cd1ff4
 app/helpers/application_helper.rb 6df579aa5e33a60ef018b32fbba7c570d1b63f44
 app/controllers/pages_controller.rb 389ac6edfc7c7837a16a3181ba36abf14f0bdad0
 app/controllers/sessions_controller.rb a439210ef7ab6374890a4341926befa0cd1e62b6

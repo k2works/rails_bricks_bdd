@@ -139,6 +139,14 @@ gem 'yard', :require => false
 gem 'yard-cucumber', :require => false
 gem 'redcarpet'
 gem 'guard-yard'
+gem 'yard-rails-plugin', :git => 'https://github.com/ogeidix/yard-rails-plugin.git', :tag => 'v0.0.1'
+gem 'guard-ctags-bundler'
+```
+
+### .yardoptsの追加 ###
+```
+--charset UTF-8
+"{lib,app,features}/**/*.{rb,feature}" --plugin yard-cucumber
 ```
 
 ### Yardの実行 ###
@@ -200,3 +208,5 @@ guard実行時にYardサーバーが実行されるので_http://localhost:8808_
 [cucumber / cucumber-rails](https://github.com/cucumber/cucumber-rails)
 
 [panthomakos/guard-yard](https://github.com/panthomakos/guard-yard)
+
+[ogeidix/yard-rails-plugin](https://github.com/ogeidix/yard-rails-plugin)
