@@ -1,3 +1,5 @@
+[![Hack k2works/rails_bricks_bdd on Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-s-v1-7475db0cf93fe5d1e29420c928ebc614.png)](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=k2works%2Frails_bricks_bdd&file_to_open=README.md)
+
 RailsBricks入門(BDD適用編)
 ===================
 
@@ -210,3 +212,6 @@ guard実行時にYardサーバーが実行されるので_http://localhost:8808_
 [panthomakos/guard-yard](https://github.com/panthomakos/guard-yard)
 
 [ogeidix/yard-rails-plugin](https://github.com/ogeidix/yard-rails-plugin)
+
+[Introducing the Nitrous.IO Hack Button: Bring Your Code to Life
+](http://blog.nitrous.io/2014/04/16/nitrousio-hack-button.html)
