@@ -189,6 +189,10 @@ Disabling profiles...
 ```
 guard実行時にYardサーバーが実行されるので_http://localhost:8808_にアクスすればドキュメントを閲覧できる。画面が文字化けしてる場合はエンコードをUnicode(UTF-8)に変更する。
 
+Yardドキュメント生成時に```invalid byte sequence in UTF-8```が発生した場合は以下をコンソルールで実行する。
+```
+$export LANG=ja_JP.eucJP
+```
 # 参照 #
 
 [RailsBricks](http://www.railsbricks.net/)
@@ -213,5 +217,6 @@ guard実行時にYardサーバーが実行されるので_http://localhost:8808_
 
 [ogeidix/yard-rails-plugin](https://github.com/ogeidix/yard-rails-plugin)
 
-[Introducing the Nitrous.IO Hack Button: Bring Your Code to Life
-](http://blog.nitrous.io/2014/04/16/nitrousio-hack-button.html)
+[Introducing the Nitrous.IO Hack Button: Bring Your Code to Life](http://blog.nitrous.io/2014/04/16/nitrousio-hack-button.html)
+
+[Ruby 1.9 Encoding Issues, Again.](http://gnuu.org/2009/11/02/ruby-1-9-encoding-issues-again/)
